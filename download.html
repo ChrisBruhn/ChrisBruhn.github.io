@@ -12,31 +12,15 @@
   </style>
 </head>
 <body>
-    <div style="margin-left:20%;margin-right:20%;" >
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li class="dropdown">
-        <a href="javascript:void(0)" class="dropbtn">Gå til kapitel</a>
-        <div class="dropdown-content">
-          <a href="#kap1">Kapitel 1</a>
-          <a href="#kap2">Kapitel 2</a>
-          <a href="#kap3">Kapitel 3</a>
-          <a href="#kap4">kapitel 4</a>
-          <a href="#kap5">kapitel 5</a>
-          <a href="#kap6">kapitel 6</a>
-          <a href="#kap7">kapitel 7</a>
-          <a href="#kap8">kapitel 8</a>
-          <a href="#kap9">kapitel 9</a>
-          <a href="#kap10">kapitel 10</a>
-        </div>
-      </li>
-      <li><a href="om-julius.html">Om Julius</a></li>
-      <li><a href="kontakt.html">Kontakt</a></li>
-      <li><a href="download.html">Filer til download</a></li>
-      <li style="float:right"><a href="index.html">Hjem</a></li>
+    <div id="menu"></div>
 
-    </ul>
-  </div>
+<script>
+  fetch('menu.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('menu').innerHTML = data;
+    });
+</script>
   <div >
     <h1>Download</h1>
     <p>Filer: </p>
