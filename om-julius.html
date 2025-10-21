@@ -18,6 +18,16 @@
   </style>
 </head>
 <body>
+
+  <div id="menu"></div>
+
+<script>
+  fetch('menu.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('menu').innerHTML = data;
+    });
+</script>
   <div >
   <h1>Om Julius</h1>
   <h2>Julius er desværre død. Han døde i efteråret 2019 efter at han var blevet ramt af en bil.</h2>
@@ -26,5 +36,6 @@
   </div>
 </body>
 </html>
+
 
 
